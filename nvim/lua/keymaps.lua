@@ -37,11 +37,11 @@ keymap('n', '<leader>p', '"+p', {})
 keymap('n', '<leader>P', '"+P', {})
 
 -- Telescope
-keymap('n', '<leader>ff', ':Telescope find_files<cr>', {})
+keymap('n', '<C-p>', ':Telescope find_files<cr>', {})
 keymap('n', '<leader>fg', ':Telescope live_grep<cr>', {})
 keymap('n', '<leader>fb', ':Telescope buffers<cr>', {})
 keymap('n', '<leader>fh', ':Telescope help_tags<cr>', {})
-keymap('n', '<leader>ft', ':Telescope<cr>', {})
+keymap('n', '<leader>ff', ':Telescope<cr>', {})
 
 -- Packer
 keymap('n', '<leader>ps', ':PackerSync <cr>', {})
@@ -52,6 +52,7 @@ keymap('n', '<leader>ev', ':vsplit $MYVIMRC<cr>', {})
 
 -- nvim-tree
 keymap('n', '<c-n>', ':NvimTreeToggle<cr>', {})
+keymap('n', '<leader>nf', ':NvimTreeFindFile<cr>', {})
 
 -- Easy indent
 keymap('v', '>', '>gv', opts)

@@ -1,5 +1,4 @@
 vim.g.mapleader = ','
-vim.opt.encoding="utf-8"
 
 vim.cmd([[
   colorscheme catppuccin
