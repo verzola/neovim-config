@@ -2,12 +2,13 @@
 require('packer').startup(function()
   use 'EdenEast/nightfox.nvim'
   use 'akinsho/bufferline.nvim'
+  use 'catppuccin/nvim'
   use 'dracula/vim'
   use 'editorconfig/editorconfig-vim'
   use 'folke/tokyonight.nvim'
   use 'folke/trouble.nvim'
   use 'folke/which-key.nvim'
-  use 'glepnir/dashboard-nvim'
+  --use 'glepnir/dashboard-nvim'
   use 'junegunn/vim-emoji'
   use 'kyazdani42/nvim-tree.lua'
   use 'kyazdani42/nvim-web-devicons'
@@ -32,6 +33,7 @@ require('packer').startup(function()
   use 'vim-test/vim-test'
   use 'voldikss/vim-floaterm'
   use 'wbthomason/packer.nvim'
+  use 'norcalli/nvim-colorizer.lua'
 end)
 
 require('trouble').setup()
