@@ -61,3 +61,6 @@ keymap('v', '<', '<gv', opts)
 -- Terminal
 keymap('n', '<leader>t', ':split term://zsh<cr>', {})
 keymap('n', '<leader>vt', ':vsplit term://zsh<cr>', {})
+
+-- Disable search highlight
+keymap('n', '<C-l>', ':noh<CR>', {})
