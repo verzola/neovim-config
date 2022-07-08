@@ -1,3 +1,5 @@
+vim.cmd "packadd packer.nvim"
+
 -- Plugins
 require('packer').startup(function()
   use 'EdenEast/nightfox.nvim'
@@ -8,7 +10,6 @@ require('packer').startup(function()
   use 'folke/tokyonight.nvim'
   use 'folke/trouble.nvim'
   use 'folke/which-key.nvim'
-  --use 'glepnir/dashboard-nvim'
   use 'junegunn/vim-emoji'
   use 'kyazdani42/nvim-tree.lua'
   use 'kyazdani42/nvim-web-devicons'
@@ -18,7 +19,7 @@ require('packer').startup(function()
   use 'mxw/vim-jsx'
   use 'neovim/nvim-lspconfig'
   use 'nvim-lualine/lualine.nvim'
-  use 'nvim-telescope/telescope.nvim'
+  use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
   use 'nvim-treesitter/nvim-treesitter'
   use 'prettier/vim-prettier'
   use 'rafi/awesome-vim-colorschemes'
@@ -34,6 +35,8 @@ require('packer').startup(function()
   use 'voldikss/vim-floaterm'
   use 'wbthomason/packer.nvim'
   use 'norcalli/nvim-colorizer.lua'
+  use 'dense-analysis/ale'
+  --use 'glepnir/dashboard-nvim'
 end)
 
 require('trouble').setup()
@@ -43,3 +46,4 @@ require('lualine').setup()
 require('bufferline').setup()
 require('gitsigns').setup()
 require('indent_blankline').setup()
+vim.notify = require("notify")
