@@ -91,4 +91,8 @@ require('lualine').setup()
 require('bufferline').setup()
 require('gitsigns').setup()
 require('indent_blankline').setup()
+
+require'nvim-treesitter.configs'.setup {
+  ensure_installed = {"bash", "html", "css", "javascript", "json", "php", "lua", "yaml", "dockerfile"}
+}
 vim.notify = require("notify")
