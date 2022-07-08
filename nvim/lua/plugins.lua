@@ -36,6 +36,7 @@ require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use 'norcalli/nvim-colorizer.lua'
   use 'dense-analysis/ale'
+  use "pangloss/vim-javascript"
   --use 'glepnir/dashboard-nvim'
 end)
 
