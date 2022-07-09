@@ -27,6 +27,7 @@ keymap('n', '<Left>', '<c-y>', opts)
 -- Navigate buffers
 keymap('n', '<leader>l', ':BufferLineCycleNext<CR>', opts)
 keymap('n', '<leader>k', ':BufferLineCyclePrev<CR>', opts)
+keymap('n', '<leader>bq', ':bp <BAR> bd #<CR>', opts)
 
 -- System clipboard
 keymap('v', '<leader>y', '"+y', opts)
