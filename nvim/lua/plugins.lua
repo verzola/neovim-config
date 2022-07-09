@@ -205,6 +205,9 @@ return packer.startup(function()
   -- Speed up nvim
   use 'lewis6991/impatient.nvim'
 
+  -- Rooter
+  use 'airblade/vim-rooter'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if packer_bootstrap then
