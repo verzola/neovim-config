@@ -11,7 +11,8 @@ require('packer').startup(function()
   use 'tpope/vim-surround'
 
   -- Start screen
-  use 'mhinz/vim-startify'
+  use 'glepnir/dashboard-nvim'
+  --use 'mhinz/vim-startify'
 
   -- Tabs
   use {
@@ -30,7 +31,12 @@ require('packer').startup(function()
   -- Line
   use { 'nvim-lualine/lualine.nvim',
     config = function()
-      require('lualine').setup()
+      require('lualine').setup {
+				options = {
+					component_separators = '|',
+					section_separators = { left = '', right = '' },
+				},
+			}
     end
   }
 
@@ -41,6 +47,9 @@ require('packer').startup(function()
   use 'dracula/vim'
   use 'catppuccin/nvim'
   use 'folke/tokyonight.nvim'
+  --use 'EdenEast/nightfox.nvim'
+  --use 'rafi/awesome-vim-colorschemes'
+  --use 'rebelot/kanagawa.nvim'
 
   -- Icons
   use 'kyazdani42/nvim-web-devicons'
@@ -66,6 +75,7 @@ require('packer').startup(function()
     end
   }
   use 'neovim/nvim-lspconfig'
+  use 'mattn/emmet-vim'
 
   use {
     'williamboman/nvim-lsp-installer',
@@ -128,6 +138,7 @@ require('packer').startup(function()
   -- Tests
   use 'vim-test/vim-test'
 
+  -- Autopairs
   use {
     "windwp/nvim-autopairs",
     config = function()
@@ -135,11 +146,7 @@ require('packer').startup(function()
     end
   }
 
-  -- Unused
-  --use 'EdenEast/nightfox.nvim'
-  --use 'glepnir/dashboard-nvim'
-  --use 'rafi/awesome-vim-colorschemes'
-  --use 'rebelot/kanagawa.nvim'
+  -- Terminal
   --use 'voldikss/vim-floaterm'
 end)
 
