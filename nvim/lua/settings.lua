@@ -1,16 +1,18 @@
-local set = vim.opt  -- to set options
+local set = vim.opt
+local g = vim.g
+local o = vim.o
 
-vim.g.mapleader = ','
+g.mapleader = ','
 
-vim.o.encoding = "utf-8"
+o.encoding = "utf-8"
 
-set.compatible = false
-set.clipboard = 'unnamedplus'
 set.autoindent = true
 set.autoread = true
 set.background = 'dark'
 set.backspace = {'indent', 'eol', 'start'}
 set.backup = false
+set.clipboard = 'unnamedplus'
+set.compatible = false
 set.completeopt = {'menuone', 'noinsert', 'noselect'}  -- Completion options (for deoplete)
 set.confirm = true
 set.cursorline = true
@@ -31,6 +33,7 @@ set.shiftround = true                                  -- Round indent
 set.shiftwidth = 2                                     -- Size of an indent
 set.showmatch = true
 set.sidescrolloff = 8                                  -- Columns of context
+set.signcolumn = 'yes'
 set.smartcase = true                                   -- Do not ignore case with capitals
 set.smartindent = true                                 -- Insert indents automatically
 set.smarttab = true
@@ -48,7 +51,6 @@ set.wildmenu = true
 set.wildmode = {'list', 'longest'}                     -- Command-line completion mode
 set.wrap = false                                       -- Disable line wrap
 set.writebackup = false
-set.signcolumn = 'yes'
 
 vim.cmd([[
   colorscheme catppuccin
