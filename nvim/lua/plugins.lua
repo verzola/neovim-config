@@ -197,6 +197,12 @@ require('packer').startup(function()
   }
 
   -- Terminal
+  use {
+    "akinsho/toggleterm.nvim",
+    config = function()
+      require("toggleterm").setup()
+    end
+  }
   --use 'voldikss/vim-floaterm'
 end)
 
