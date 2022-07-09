@@ -47,6 +47,7 @@ require('packer').startup(function()
   use 'dracula/vim'
   use 'catppuccin/nvim'
   use 'folke/tokyonight.nvim'
+  use 'marko-cerovac/material.nvim'
   --use 'EdenEast/nightfox.nvim'
   --use 'rafi/awesome-vim-colorschemes'
   --use 'rebelot/kanagawa.nvim'
@@ -60,6 +61,10 @@ require('packer').startup(function()
     'nvim-treesitter/nvim-treesitter',
     config = function()
       require'nvim-treesitter.configs'.setup {
+        highlight = { enable = true },
+        incremental_selection = { enable = true },
+        indent = { enable = true },
+        rainbow = { enable = true },
         ensure_installed = {
           "bash",
           "html",
