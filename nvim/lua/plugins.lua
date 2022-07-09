@@ -32,11 +32,11 @@ require('packer').startup(function()
   use { 'nvim-lualine/lualine.nvim',
     config = function()
       require('lualine').setup {
-				options = {
-					component_separators = '|',
-					section_separators = { left = '', right = '' },
-				},
-			}
+        options = {
+          component_separators = '|',
+          section_separators = { left = '', right = '' },
+        },
+      }
     end
   }
 
