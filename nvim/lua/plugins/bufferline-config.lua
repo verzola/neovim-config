@@ -1,3 +1,5 @@
 require('bufferline').setup{
-  separator_style = "slant"
+  options = {
+    separator_style = "slant"
+  }
 }
