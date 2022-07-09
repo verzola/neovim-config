@@ -14,13 +14,25 @@ require('packer').startup(function()
   use 'mhinz/vim-startify'
 
   -- Tabs
-  use 'akinsho/bufferline.nvim'
+  use {
+    'akinsho/bufferline.nvim',
+      requires = 'kyazdani42/nvim-web-devicons',
+      config = function()
+        require('bufferline').setup()
+      end
+  }
 
   -- File tree
-  use { 'kyazdani42/nvim-tree.lua',  requires = { 'kyazdani42/nvim-web-devicons' } }
+  use { 'kyazdani42/nvim-tree.lua',  requires = { 'kyazdani42/nvim-web-devicons' }, config = function()
+    require('nvim-tree').setup()
+  end}
 
   -- Line
-  use 'nvim-lualine/lualine.nvim'
+  use { 'nvim-lualine/lualine.nvim',
+    config = function()
+      require('lualine').setup()
+    end
+  }
 
   -- File finder
   use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
@@ -35,8 +47,32 @@ require('packer').startup(function()
   use 'junegunn/vim-emoji'
 
   -- Languages/syntax
-  use 'nvim-treesitter/nvim-treesitter'
-  --use 'neovim/nvim-lspconfig'
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    config = function()
+      require'nvim-treesitter.configs'.setup {
+        ensure_installed = {
+          "bash",
+          "html",
+          "css",
+          "javascript",
+          "json",
+          "php",
+          "lua",
+          "yaml",
+          "dockerfile"
+        }
+      }
+    end
+  }
+  use 'neovim/nvim-lspconfig'
+
+  use {
+    'williamboman/nvim-lsp-installer',
+    config = function()
+      require("nvim-lsp-installer").setup()
+    end
+  }
   --use "pangloss/vim-javascript"
   --use 'mxw/vim-jsx'
 
@@ -44,14 +80,26 @@ require('packer').startup(function()
   use 'dense-analysis/ale'
   use 'prettier/vim-prettier'
   use 'editorconfig/editorconfig-vim'
-  use 'folke/trouble.nvim'
+  use { 'folke/trouble.nvim', config = function()
+    require('trouble').setup()
+  end}
 
   -- Git
-  use 'lewis6991/gitsigns.nvim'
+  use {
+    'lewis6991/gitsigns.nvim',
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
   use 'tpope/vim-fugitive'
 
   -- Indentation
-  use 'lukas-reineke/indent-blankline.nvim'
+  use {
+    'lukas-reineke/indent-blankline.nvim',
+    config = function()
+      require('indent_blankline').setup()
+    end
+  }
 
   -- Comments
   use 'tpope/vim-commentary'
@@ -60,10 +108,19 @@ require('packer').startup(function()
   use 'tpope/vim-obsession'
 
   -- Possible commands
-  use 'folke/which-key.nvim'
+  use { 'folke/which-key.nvim',
+    config = function()
+      require('which-key').setup()
+    end
+  }
 
   -- Notification
-  use 'rcarriga/nvim-notify'
+  use {
+    'rcarriga/nvim-notify',
+    config = function()
+      vim.notify = require("notify")
+    end
+  }
 
   -- Show color on colors
   use 'norcalli/nvim-colorizer.lua'
@@ -73,7 +130,9 @@ require('packer').startup(function()
 
   use {
     "windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
+    config = function()
+      require("nvim-autopairs").setup()
+    end
   }
 
   -- Unused
@@ -84,15 +143,3 @@ require('packer').startup(function()
   --use 'voldikss/vim-floaterm'
 end)
 
-require('trouble').setup()
-require('which-key').setup()
-require('nvim-tree').setup()
-require('lualine').setup()
-require('bufferline').setup()
-require('gitsigns').setup()
-require('indent_blankline').setup()
-
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = {"bash", "html", "css", "javascript", "json", "php", "lua", "yaml", "dockerfile"}
-}
-vim.notify = require("notify")

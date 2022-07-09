@@ -34,7 +34,6 @@ set.smartcase = true                                   -- Do not ignore case wit
 set.smartindent = true                                 -- Insert indents automatically
 set.smarttab = true
 set.softtabstop = 2
-set.spell = true
 set.splitbelow = true                                  -- Put new windows below current
 set.splitright = true                                  -- Put new windows right of current
 set.swapfile = false
