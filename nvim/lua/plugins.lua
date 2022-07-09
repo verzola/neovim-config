@@ -11,8 +11,8 @@ require('packer').startup(function()
   use 'tpope/vim-surround'
 
   -- Start screen
-  use 'glepnir/dashboard-nvim'
-  --use 'mhinz/vim-startify'
+  use 'mhinz/vim-startify'
+  --use 'glepnir/dashboard-nvim'
 
   -- Tabs
   use {
