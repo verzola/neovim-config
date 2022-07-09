@@ -1,5 +1,3 @@
-vim.cmd "packadd packer.nvim"
-
 -- Plugins
 require('packer').startup(function()
   -- Packer itself
