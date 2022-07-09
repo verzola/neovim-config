@@ -1,2 +1,2 @@
 # Verzola's Neovim Config
-Written in Lua
+Written in Lua 🌜
