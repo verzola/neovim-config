@@ -69,3 +69,6 @@ keymap('n', '<C-l>', ':noh<CR>', {})
 -- Tab go to pair
 keymap('n', '<tab>', '%', {})
 keymap('v', '<tab>', '%', {})
+
+-- Sort
+keymap('v', '<leader>s', ":'<,'>sort<CR>", {})
