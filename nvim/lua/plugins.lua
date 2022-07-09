@@ -74,9 +74,8 @@ require('packer').startup(function()
       }
     end
   }
-  use 'neovim/nvim-lspconfig'
   use 'mattn/emmet-vim'
-
+  use 'neovim/nvim-lspconfig'
   use {
     'williamboman/nvim-lsp-installer',
     config = function()

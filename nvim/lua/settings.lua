@@ -4,6 +4,8 @@ vim.g.mapleader = ','
 
 vim.o.encoding = "utf-8"
 
+set.compatible = false
+set.clipboard = 'unnamedplus'
 set.autoindent = true
 set.autoread = true
 set.background = 'dark'
@@ -23,9 +25,8 @@ set.list = true                                        -- Show some invisible ch
 set.mouse = 'a'
 set.number = true                                      -- Show line numbers
 set.pastetoggle = '<F12>'
---set.relativenumber = true                              -- Relative line numbers
 set.ruler = true
-set.scrolloff = 4                                      -- Lines of context
+set.scrolloff = 10                                     -- Lines of context
 set.shiftround = true                                  -- Round indent
 set.shiftwidth = 2                                     -- Size of an indent
 set.showmatch = true
@@ -47,6 +48,7 @@ set.wildmenu = true
 set.wildmode = {'list', 'longest'}                     -- Command-line completion mode
 set.wrap = false                                       -- Disable line wrap
 set.writebackup = false
+set.signcolumn = 'yes'
 
 vim.cmd([[
   colorscheme catppuccin

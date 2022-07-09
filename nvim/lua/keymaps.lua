@@ -52,7 +52,7 @@ keymap('n', '<leader>sv', ':source $MYVIMRC<cr>', opts)
 keymap('n', '<leader>ev', ':vsplit $MYVIMRC<cr>', opts)
 
 -- nvim-tree
-keymap('n', '<c-n>', ':NvimTreeToggle<cr>', opts)
+keymap('n', '<c-e>', ':NvimTreeToggle<cr>', opts)
 keymap('n', '<leader>nf', ':NvimTreeFindFile<cr>', opts)
 
 -- Easy indent
@@ -64,11 +64,11 @@ keymap('n', '<leader>t', ':split term://zsh<cr>', opts)
 keymap('n', '<leader>vt', ':vsplit term://zsh<cr>', opts)
 
 -- Disable search highlight
-keymap('n', '<C-l>', ':noh<CR>', {})
+keymap('n', '<C-l>', ':noh<CR>', opts)
 
 -- Tab go to pair
-keymap('n', '<tab>', '%', {})
-keymap('v', '<tab>', '%', {})
+keymap('n', '<tab>', '%', opts)
+keymap('v', '<tab>', '%', opts)
 
 -- Sort
-keymap('v', '<leader>s', ":'<,'>sort<CR>", {})
+keymap('v', '<leader>s', ":'<,'>sort<CR>", opts)
