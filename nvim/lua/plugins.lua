@@ -58,9 +58,7 @@ return packer.startup(function()
     'akinsho/bufferline.nvim',
       requires = 'kyazdani42/nvim-web-devicons',
       config = function()
-        require('bufferline').setup{
-          separator_style = "padded_slant"
-        }
+        require 'plugins.bufferline-config'
       end
   }
 
@@ -69,19 +67,14 @@ return packer.startup(function()
     'kyazdani42/nvim-tree.lua',
     requires = { 'kyazdani42/nvim-web-devicons' },
     config = function()
-      require('nvim-tree').setup()
+      require 'plugins.tree-config'
     end
   }
 
   -- Line
   use { 'nvim-lualine/lualine.nvim',
     config = function()
-      require('lualine').setup {
-        options = {
-          component_separators = '|',
-          section_separators = { left = '', right = '' },
-        },
-      }
+      require 'plugins.lualine-config'
     end
   }
 
@@ -97,8 +90,8 @@ return packer.startup(function()
   use 'folke/tokyonight.nvim'
   use 'marko-cerovac/material.nvim'
   --use 'EdenEast/nightfox.nvim'
-  --use 'rafi/awesome-vim-colorschemes'
   --use 'rebelot/kanagawa.nvim'
+  --use 'rafi/awesome-vim-colorschemes'
 
   -- Icons
   use 'kyazdani42/nvim-web-devicons'
@@ -108,36 +101,25 @@ return packer.startup(function()
   use {
     'nvim-treesitter/nvim-treesitter',
     config = function()
-      require'nvim-treesitter.configs'.setup {
-        highlight = { enable = true },
-        incremental_selection = { enable = true },
-        indent = { enable = true },
-        rainbow = { enable = true },
-        ensure_installed = {
-          "bash",
-          "html",
-          "css",
-          "javascript",
-          "json",
-          "php",
-          "lua",
-          "yaml",
-          "dockerfile"
-        }
-      }
+      require 'plugins.treesitter-config'
     end
   }
   use 'mattn/emmet-vim'
-  use 'neovim/nvim-lspconfig'
-  use 'folke/lsp-colors.nvim'
   use {
     'williamboman/nvim-lsp-installer',
     config = function()
-      require("nvim-lsp-installer").setup()
+      require 'plugins.lsp-installer-config'
     end
   }
-  --use "pangloss/vim-javascript"
-  --use 'mxw/vim-jsx'
+  use 'neovim/nvim-lspconfig'
+  use 'folke/lsp-colors.nvim'
+
+  -- Autocomplete
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/nvim-cmp'
 
   -- Formatter & Linter
   use 'dense-analysis/ale'
@@ -147,7 +129,7 @@ return packer.startup(function()
     'folke/trouble.nvim',
     requires = "kyazdani42/nvim-web-devicons",
     config = function()
-      require('trouble').setup()
+      require 'plugins.trouble-config'
     end
   }
 
@@ -155,7 +137,7 @@ return packer.startup(function()
   use {
     'lewis6991/gitsigns.nvim',
     config = function()
-      require('gitsigns').setup()
+      require 'plugins.gitsigns-config'
     end
   }
   use 'tpope/vim-fugitive'
@@ -164,7 +146,7 @@ return packer.startup(function()
   use {
     'lukas-reineke/indent-blankline.nvim',
     config = function()
-      require('indent_blankline').setup()
+      require 'plugins.indent-blankline-config'
     end
   }
 
@@ -178,7 +160,7 @@ return packer.startup(function()
   use {
     'folke/which-key.nvim',
     config = function()
-      require('which-key').setup()
+      require 'plugins.which-key-config'
     end
   }
 
@@ -186,7 +168,7 @@ return packer.startup(function()
   use {
     'rcarriga/nvim-notify',
     config = function()
-      vim.notify = require("notify")
+      require 'plugins.notify-config'
     end
   }
 
@@ -200,40 +182,14 @@ return packer.startup(function()
   use {
     "windwp/nvim-autopairs",
     config = function()
-      require("nvim-autopairs").setup()
+      require 'plugins.autopairs-config'
     end
   }
 
   use {
     'gelguy/wilder.nvim',
     config = function()
-      local wilder = require('wilder')
-      wilder.setup{
-        modes = {
-          ':',
-          '/',
-          '?'
-        }
-      }
-      wilder.set_option('renderer', wilder.renderer_mux({
-        [':'] = wilder.popupmenu_renderer({
-          highlighter = wilder.basic_highlighter(),
-        }),
-        ['/'] = wilder.wildmenu_renderer({
-          highlighter = wilder.basic_highlighter(),
-        }),
-        ['?'] = wilder.wildmenu_renderer({
-          highlighter = wilder.basic_highlighter(),
-        }),
-      }))
-      wilder.set_option('renderer', wilder.popupmenu_renderer(
-        wilder.popupmenu_border_theme({
-          highlights = {
-            border = 'Normal',
-          },
-          border = 'rounded',
-        })
-      ))
+      require 'plugins.wilder-config'
     end,
   }
 
@@ -241,7 +197,7 @@ return packer.startup(function()
   use {
     "akinsho/toggleterm.nvim",
     config = function()
-      require("toggleterm").setup()
+      require 'plugins.toggleterm-config'
     end
   }
   --use 'voldikss/vim-floaterm'
