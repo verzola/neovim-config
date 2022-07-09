@@ -26,9 +26,13 @@ require('packer').startup(function()
   }
 
   -- File tree
-  use { 'kyazdani42/nvim-tree.lua',  requires = { 'kyazdani42/nvim-web-devicons' }, config = function()
-    require('nvim-tree').setup()
-  end}
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = { 'kyazdani42/nvim-web-devicons' },
+    config = function()
+      require('nvim-tree').setup()
+    end
+  }
 
   -- Line
   use { 'nvim-lualine/lualine.nvim',
@@ -43,7 +47,10 @@ require('packer').startup(function()
   }
 
   -- File finder
-  use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} } }
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} } 
+  }
 
   -- Colorschemes
   use 'dracula/vim'
@@ -83,6 +90,7 @@ require('packer').startup(function()
   }
   use 'mattn/emmet-vim'
   use 'neovim/nvim-lspconfig'
+  use 'folke/lsp-colors.nvim'
   use {
     'williamboman/nvim-lsp-installer',
     config = function()
@@ -96,9 +104,13 @@ require('packer').startup(function()
   use 'dense-analysis/ale'
   use 'prettier/vim-prettier'
   use 'editorconfig/editorconfig-vim'
-  use { 'folke/trouble.nvim', config = function()
-    require('trouble').setup()
-  end}
+  use {
+    'folke/trouble.nvim',
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require('trouble').setup()
+    end
+  }
 
   -- Git
   use {
@@ -124,7 +136,8 @@ require('packer').startup(function()
   use 'tpope/vim-obsession'
 
   -- Possible commands
-  use { 'folke/which-key.nvim',
+  use {
+    'folke/which-key.nvim',
     config = function()
       require('which-key').setup()
     end
@@ -156,7 +169,13 @@ require('packer').startup(function()
     'gelguy/wilder.nvim',
     config = function()
       local wilder = require('wilder')
-      wilder.setup({modes = {':', '/', '?'}})
+      wilder.setup{
+        modes = {
+          ':',
+          '/',
+          '?'
+        }
+      }
       wilder.set_option('renderer', wilder.renderer_mux({
         [':'] = wilder.popupmenu_renderer({
           highlighter = wilder.basic_highlighter(),
@@ -168,9 +187,6 @@ require('packer').startup(function()
           highlighter = wilder.basic_highlighter(),
         }),
       }))
-      wilder.set_option('renderer', wilder.popupmenu_renderer({
-        pumblend = 20,
-      }))
       wilder.set_option('renderer', wilder.popupmenu_renderer(
         wilder.popupmenu_border_theme({
           highlights = {
@@ -179,11 +195,6 @@ require('packer').startup(function()
           border = 'rounded',
         })
       ))
-      wilder.set_option('renderer', wilder.popupmenu_renderer({
-        highlighter = wilder.basic_highlighter(),
-        left = {' ', wilder.popupmenu_devicons()},
-        right = {' ', wilder.popupmenu_scrollbar()},
-      }))
     end,
   }
 
