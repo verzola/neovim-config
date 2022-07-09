@@ -19,7 +19,9 @@ require('packer').startup(function()
     'akinsho/bufferline.nvim',
       requires = 'kyazdani42/nvim-web-devicons',
       config = function()
-        require('bufferline').setup()
+        require('bufferline').setup{
+          separator_style = "padded_slant"
+        }
       end
   }
 

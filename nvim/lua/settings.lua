@@ -3,6 +3,7 @@ local g = vim.g
 local o = vim.o
 
 g.mapleader = ','
+g.material_style = "deep ocean"
 
 o.encoding = "utf-8"
 
@@ -53,7 +54,7 @@ set.wrap = false                                       -- Disable line wrap
 set.writebackup = false
 
 vim.cmd([[
-  colorscheme catppuccin
+  colorscheme material
   set formatoptions+=j
   set undodir=~/.vim-undo
 ]])
