@@ -9,3 +9,4 @@ require'lspconfig'.jsonls.setup{}
 require'lspconfig'.bashls.setup{}
 require'lspconfig'.dockerls.setup{}
 require'lspconfig'.ansiblels.setup{}
+require'lspconfig'.sumneko_lua.setup{}
