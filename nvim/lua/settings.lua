@@ -23,6 +23,7 @@ g.material_style = "deep ocean"
 --set.tabpagemax = 50
 --set.sessionoptions = set.sessionoptions - {'options'}
 --set.viewoptions = set.viewoptions - {'options'}
+set pumblend = 20
 set.background = 'dark'
 set.backup = false
 set.clipboard = 'unnamedplus'
