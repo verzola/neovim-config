@@ -1,10 +1,8 @@
 local set = vim.opt
 local g = vim.g
-local o = vim.o
 
 g.mapleader = ','
 g.material_style = "deep ocean"
-
 
 -- Settings already defined by vim-sensible
 --set.autoindent = true
