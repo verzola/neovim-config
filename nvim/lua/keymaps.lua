@@ -64,7 +64,7 @@ keymap('n', '<leader>t', ':split term://zsh<cr>', opts)
 keymap('n', '<leader>vt', ':vsplit term://zsh<cr>', opts)
 
 -- Disable search highlight
-keymap('n', '<C-l>', ':noh<CR>', opts)
+--keymap('n', '<C-l>', ':noh<CR>', opts)
 
 -- Tab go to pair
 keymap('n', '<tab>', '%', opts)
