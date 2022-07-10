@@ -4,14 +4,14 @@ require'nvim-treesitter.configs'.setup {
   indent = { enable = true },
   rainbow = { enable = true },
   ensure_installed = {
-    "bash",
-    "html",
-    "css",
-    "javascript",
-    "json",
-    "php",
-    "lua",
-    "yaml",
-    "dockerfile"
+    'bash',
+    'html',
+    'css',
+    'javascript',
+    'json',
+    'php',
+    'lua',
+    'yaml',
+    'dockerfile'
   }
 }
