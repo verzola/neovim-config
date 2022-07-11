@@ -65,7 +65,7 @@ set.wrap = false                                       -- Disable line wrap
 set.writebackup = false
 
 vim.cmd([[
-  colorscheme material
+  colorscheme catppuccin
   set formatoptions+=j
   set undodir=~/.vim-undo
 ]])
