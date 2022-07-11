@@ -1,1 +1,1 @@
-export default () => <div foo="bar" class="test" />
+export default () => <div foo="bar" class="test" />;
