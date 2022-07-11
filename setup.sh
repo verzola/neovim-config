@@ -3,6 +3,8 @@ sudo apt install -y xsel
 sudo npm install -g neovim
 sudo npm install -g tree-sitter
 sudo npm install -g vscode-langservers-extracted
+sudo npm install -g typescript
+sudo npm install -g typescript-language-server
 sudo npm install -g cssmodules-language-server
 sudo npm install -g @tailwindcss/language-server
 sudo npm install -g intelephense
