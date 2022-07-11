@@ -1,6 +1,6 @@
 -- Keymaps
 local keymap = vim.api.nvim_set_keymap
-local opts = { noremap = true }
+local opts = { noremap = true, silent = true }
 
 -- Fast leave insert mode
 keymap('i', 'jk', '<Esc>', opts)
