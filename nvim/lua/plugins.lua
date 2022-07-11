@@ -3,7 +3,7 @@ local fn = vim.fn
 local install_path = fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
 
 if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({
+  PACKER_BOOTSTRAP = fn.system({
     'git',
     'clone',
     '--depth',
@@ -11,8 +11,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
     'https://github.com/wbthomason/packer.nvim',
     install_path
   })
-
-  execute 'packadd packer.nvim'
+  print("Installing packer close and reopen Neovim...")
 end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
@@ -81,7 +80,7 @@ return packer.startup(function()
   -- File finder
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} } 
+    requires = { {'nvim-lua/plenary.nvim'} }
   }
 
   -- Colorschemes
@@ -210,7 +209,7 @@ return packer.startup(function()
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
-  if packer_bootstrap then
+  if PACKER_BOOTSTRAP then
     require('packer').sync()
   end
 end)
