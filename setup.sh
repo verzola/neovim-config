@@ -1,5 +1,5 @@
 #!/bin/sh
-sudo apt install -y xsel
+sudo apt install -y xsel ninja-build gcc g++ clang ninja-build
 sudo npm install -g neovim
 sudo npm install -g tree-sitter
 sudo npm install -g vscode-langservers-extracted
