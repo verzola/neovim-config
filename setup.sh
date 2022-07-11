@@ -1,14 +1,14 @@
 #!/bin/sh
 sudo apt install -y xsel ninja-build gcc g++ clang ninja-build
-sudo npm install -g neovim
-sudo npm install -g tree-sitter
-sudo npm install -g vscode-langservers-extracted
-sudo npm install -g typescript
-sudo npm install -g typescript-language-server
-sudo npm install -g cssmodules-language-server
-sudo npm install -g @tailwindcss/language-server
-sudo npm install -g intelephense
-sudo npm install -g bash-language-server
-sudo npm install -g dockerfile-language-server-nodejs
-sudo npm install -g @ansible/ansible-language-server
+sudo npm install -g neovim \
+                    tree-sitter \
+                    vscode-langservers-extracted \
+                    typescript \
+                    typescript-language-server \
+                    cssmodules-language-server \
+                    @tailwindcss/language-server \
+                    intelephense \
+                    bash-language-server \
+                    dockerfile-language-server-nodejs \
+                    @ansible/ansible-language-server
 pip install pynvim
