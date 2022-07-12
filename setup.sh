@@ -10,5 +10,7 @@ sudo npm install -g neovim \
                     intelephense \
                     bash-language-server \
                     dockerfile-language-server-nodejs \
-                    @ansible/ansible-language-server
+                    @ansible/ansible-language-server \
+                    yaml-language-server \
+                    emmet-ls
 pip install pynvim
