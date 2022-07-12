@@ -4,7 +4,7 @@ local cmp = require'cmp'
     snippet = {
       -- REQUIRED - you must specify a snippet engine
       expand = function(args)
-        vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
+        -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
         -- require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
         -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
         -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
@@ -23,7 +23,7 @@ local cmp = require'cmp'
     }),
     sources = cmp.config.sources({
       { name = 'nvim_lsp' },
-      { name = 'vsnip' }, -- For vsnip users.
+      -- { name = 'vsnip' }, -- For vsnip users.
       -- { name = 'luasnip' }, -- For luasnip users.
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
@@ -65,42 +65,55 @@ local cmp = require'cmp'
   require'lspconfig'.ansiblels.setup{
     capabilities = capabilities
   }
+
   require'lspconfig'.bashls.setup{
     capabilities = capabilities
   }
+
   require'lspconfig'.cssls.setup{
     capabilities = capabilities
   }
+
   require'lspconfig'.cssmodules_ls.setup{
     capabilities = capabilities
   }
+
   require'lspconfig'.dockerls.setup{
     capabilities = capabilities
   }
+
   require'lspconfig'.emmet_ls.setup{
     capabilities = capabilities
   }
+
   require'lspconfig'.eslint.setup{
     capabilities = capabilities
   }
+
   require'lspconfig'.html.setup{
     capabilities = capabilities
   }
+
   require'lspconfig'.intelephense.setup{
     capabilities = capabilities
   }
+
   require'lspconfig'.jsonls.setup{
     capabilities = capabilities
   }
+
   require'lspconfig'.sumneko_lua.setup{
     capabilities = capabilities
   }
+
   require'lspconfig'.tailwindcss.setup{
     capabilities = capabilities
   }
+
   require'lspconfig'.tsserver.setup{
     capabilities = capabilities
   }
+
   require'lspconfig'.yamlls.setup{
     capabilities = capabilities
   }
