@@ -72,3 +72,6 @@ keymap('v', '<tab>', '%', opts)
 
 -- Sort
 keymap('v', '<leader>s', ":'<,'>sort<CR>", opts)
+
+-- Lsp Install Info
+keymap('n', '<leader>lsp', ':LspInstallInfo<CR>', opts)
