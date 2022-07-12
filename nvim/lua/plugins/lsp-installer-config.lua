@@ -10,6 +10,7 @@ require('nvim-lsp-installer').setup{
      'html',
      'intelephense',
      'jsonls',
+     'quick_lint_js',
      'sumneko_lua',
      'tailwindcss',
      'tsserver',
