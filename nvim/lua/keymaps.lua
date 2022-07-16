@@ -60,10 +60,12 @@ keymap('v', '>', '>gv', opts)
 keymap('v', '<', '<gv', opts)
 
 -- Terminal
-keymap('n', '<leader>t', ':split term://zsh<cr>', opts)
-keymap('n', '<leader>vt', ':vsplit term://zsh<cr>', opts)
+-- already mapped by terminal plugin
+-- keymap('n', '<leader>t', ':split term://zsh<cr>', opts)
+-- keymap('n', '<leader>vt', ':vsplit term://zsh<cr>', opts)
 
 -- Disable search highlight
+-- already mapped by sensible plugin
 --keymap('n', '<C-l>', ':noh<CR>', opts)
 
 -- Tab go to pair
