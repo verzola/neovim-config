@@ -84,10 +84,10 @@ return packer.startup(function()
   }
 
   -- Colorschemes
-  use 'dracula/vim'
   use 'catppuccin/nvim'
-  use 'folke/tokyonight.nvim'
-  use 'marko-cerovac/material.nvim'
+  --use 'dracula/vim'
+  --use 'folke/tokyonight.nvim'
+  --use 'marko-cerovac/material.nvim'
   --use 'EdenEast/nightfox.nvim'
   --use 'rebelot/kanagawa.nvim'
   --use 'rafi/awesome-vim-colorschemes'
