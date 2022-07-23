@@ -1,16 +1,42 @@
 #!/bin/sh
-sudo apt install -y xsel ninja-build gcc g++ clang ninja-build
-sudo npm install -g neovim \
-                    tree-sitter \
-                    vscode-langservers-extracted \
-                    typescript \
-                    typescript-language-server \
-                    cssmodules-language-server \
-                    @tailwindcss/language-server \
-                    intelephense \
-                    bash-language-server \
-                    dockerfile-language-server-nodejs \
-                    @ansible/ansible-language-server \
-                    yaml-language-server \
-                    emmet-ls
+echo "Installing node neovim support..."
+sudo npm install -g neovim
+
+echo "Installing tree-sitter..."
+sudo npm install -g tree-sitter
+
+echo "Installing vscode-langservers-extracted..."
+sudo npm install -g vscode-langservers-extracted
+
+echo "Installing typescript..."
+sudo npm install -g typescript
+
+echo "Installing typescript language server..."
+sudo npm install -g typescript-language-server
+
+echo "Installing css-modules language server..."
+sudo npm install -g cssmodules-language-server
+
+echo "Installing tailwind language server..."
+sudo npm install -g @tailwindcss/language-server
+
+echo "Installing php language server..."
+sudo npm install -g intelephense
+
+echo "Installing bash language server..."
+sudo npm install -g bash-language-server
+
+echo "Installing dockerfile language server..."
+sudo npm install -g dockerfile-language-server-nodejs
+
+echo "Installing ansible language server..."
+sudo npm install -g @ansible/ansible-language-server
+
+echo "Installing yaml language server..."
+sudo npm install -g yaml-language-server
+
+echo "Installing emmet language server..."
+sudo npm install -g emmet-ls
+
+echo "Installing python neovim support..."
 pip install pynvim

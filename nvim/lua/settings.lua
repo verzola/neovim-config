@@ -64,6 +64,12 @@ set.wildmode = {'list', 'longest'}                     -- Command-line completio
 set.wrap = false                                       -- Disable line wrap
 set.writebackup = false
 
+vim.g.catppuccin_flavour = "mocha"
+
+require("catppuccin").setup{
+  transparent_background = true,
+}
+
 vim.cmd([[
   colorscheme catppuccin
   set formatoptions+=j
